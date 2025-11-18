@@ -1,0 +1,77 @@
+@use "variables" as *;
+
+// NAVBAR
+.navbar {
+  background-color: $color-primario;
+  padding: 15px 25px;
+
+  /* TABLET */
+  @media (max-width: 768px) {
+    padding: 12px 20px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    padding: 10px 15px;
+  }
+}
+
+// LOGO
+.navbar-brand img {
+  height: 60px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+
+  /* TABLET */
+  @media (max-width: 768px) {
+    height: 50px;
+  }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    height: 45px;
+  }
+}
+
+// LINKS
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-secundario !important;
+  }
+
+  /* TABLET */
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+    margin-right: 0.7rem;
+  }
+
+  /* MOBILE (cuando se abre menú colapsado) */
+  @media (max-width: 480px) {
+    text-align: center;
+    padding: 10px 0;
+    margin-right: 0 !important;
+    font-size: 1rem;
+  }
+}
+
+// TOGGLER
+.navbar-toggler {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 5px;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    padding: 5px 8px;
+  }
+}

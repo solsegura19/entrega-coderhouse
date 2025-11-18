@@ -1,0 +1,96 @@
+@use "variables" as *;
+
+// TÍTULOS PRINCIPALES
+main {
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3rem;
+    color: $color-primario;
+
+    // TABLET
+    @media (max-width: 768px) {
+      font-size: 2.4rem;
+      margin-top: 30px;
+    }
+
+    // MOBILE
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
+    color: #444;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+  }
+}
+
+// CARRUSEL
+.carousel {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  // TABLET
+  @media (max-width: 768px) {
+    max-width: 95%;
+    margin-bottom: 30px;
+  }
+
+  // MOBILE
+  @media (max-width: 480px) {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    height: 500px;
+
+    @media (max-width: 768px) {
+      height: 350px;
+    }
+
+    @media (max-width: 480px) {
+      height: 250px;
+    }
+  }
+}

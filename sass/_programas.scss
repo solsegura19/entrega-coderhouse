@@ -1,0 +1,75 @@
+@use "variables" as *;
+
+// SECCIÓN PROGRAMAS
+.programas {
+max-width: 1000px;
+margin: 50px auto;
+padding: 20px;
+
+
+h2 {
+text-align: center;
+color: $color-primario;
+margin-bottom: 30px;
+}
+
+
+p {
+text-align: center;
+color: #555;
+max-width: 800px;
+margin: 0 auto 40px auto;
+font-size: 1.1rem;
+line-height: 1.7;
+}
+}
+
+// TARJETAS DE PROGRAMAS
+.grid-programas {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+
+
+.programa-card {
+background: white;
+border-radius: 15px;
+padding: 20px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+&:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+h3 {
+color: $color-primario;
+margin-bottom: 10px;
+}
+
+
+p {
+color: #666;
+margin-bottom: 15px;
+}
+
+
+button {
+background-color: $color-primario;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+
+
+&:hover {
+background-color: darken($color-primario, 10%);
+}
+}
+}
