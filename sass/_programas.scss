@@ -1,75 +1,74 @@
 @use "variables" as *;
 
-// SECCIÓN PROGRAMAS
-.programas {
-max-width: 1000px;
-margin: 50px auto;
-padding: 20px;
-
-
-h2 {
-text-align: center;
-color: $color-primario;
-margin-bottom: 30px;
+/* ----- Contenedor principal ----- */
+.cursos-seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
-
-p {
-text-align: center;
-color: #555;
-max-width: 800px;
-margin: 0 auto 40px auto;
-font-size: 1.1rem;
-line-height: 1.7;
-}
+/* ----- Cada curso ----- */
+.curso {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-// TARJETAS DE PROGRAMAS
-.grid-programas {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
+/* Imagen */
+.curso__imagen img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  display: block;
 }
 
-
-.programa-card {
-background: white;
-border-radius: 15px;
-padding: 20px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
-&:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+/* Texto */
+.curso__texto {
+  flex: 1;
 }
 
-
-h3 {
-color: $color-primario;
-margin-bottom: 10px;
+.curso__titulo {
+  color: $color-primario;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-
-p {
-color: #666;
-margin-bottom: 15px;
+.curso__descripcion {
+  color: $color-texto;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 
-
-button {
-background-color: $color-primario;
-color: white;
-border: none;
-padding: 10px 20px;
-border-radius: 8px;
-cursor: pointer;
-transition: background-color 0.3s ease;
-
-
-&:hover {
-background-color: darken($color-primario, 10%);
+.curso__cta {
+  text-decoration: none;
+  color: $color-primario;
+  font-weight: bold;
 }
+
+.curso__cta:hover {
+  color: $color-secundario;
 }
+
+/* ----- Invertir la segunda fila ----- */
+.curso--reverse {
+  flex-direction: row-reverse;
+}
+
+/* ----- Mobile ----- */
+@media (max-width: 768px) {
+  .curso,
+  .curso--reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .curso__imagen img {
+    width: 80%;
+    max-width: 350px;
+  }
 }
